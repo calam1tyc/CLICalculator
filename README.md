@@ -3,37 +3,42 @@ Text-based calculator written in Java which can evaluate complex arithmetic expr
 
 This program supports five different operators, in order of precedence:
 
-'^' (exponent)
+  * '^' (exponent)
 
-'*' (multiply)
+  * '*' (multiply)
 
-'/' (divide)
+  * '/' (divide)
 
-'+' (add)
+  * '+' (add)
 
-'-' (subtract)
+  * '-' (subtract)
 
 Negative and decimal numbers are supported.
+
+---
 
 There is also support for functions with the syntax func_name(expression).
 
 The default functions are:
 
-sqrt() (square root)
+  * sqrt() (square root)
 
-log_10() (log base 10)
+  * log_10() (log base 10)
 
-logn() (natural log)
+  * logn() (natural log)
 
-sin() (sine)
+  * sin() (sine)
 
-cos() (cosine)
+  * cos() (cosine)
 
-tan() (tangent)
+  * tan() (tangent)
+
+Custom functions can be implemented by adding them to the functionResult method.
+
+---
   
-Stand-alone parentheses or those part of functions are evaluated first.
+Parentheses are always evaluated before the rest of the expression and can be nested.
 
-Ex. (3 + 4) * 2 + sqrt(4 + 5) returns 17.0
- 
-Implementing new functions or binary operators can be done without deeply analyzing the code.
+Ex. (3 * (4 - 3)) * 2 + sqrt(4 + 5) returns 9.0
+
  
